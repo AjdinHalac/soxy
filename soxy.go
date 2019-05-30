@@ -22,11 +22,6 @@ func (b *Soxy) Refresh() {
 	}
 }
 
-// All returns a list of all proxies.
-func (b *Soxy) All() []Proxy {
-	return b.proxies
-}
-
 // Random fetches a random proxy.
 func (b *Soxy) Random() Proxy {
 	chosen := b.proxies[rand.Intn(len(b.proxies)-1)]
